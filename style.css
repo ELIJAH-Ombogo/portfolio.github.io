@@ -1,3 +1,43 @@
+.glowing-image {
+  position: relative;
+  display: inline-block;
+}
+
+.glowing-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 10px; /* Optional */
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.5); /* Glowing effect */
+}
+
+/* For different colors */
+.glowing
+.glowing-image::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(255, 0, 0, 0.5), 0 0 20px rgba(0, 255, 0, 0.5), 0 0 30px rgba(0, 0, 255, 0.5);
+  animation: glow 2s infinite;
+}
+
+@keyframes glow {
+  0% {
+    box-shadow: 0 0 10px rgba(255, 0, 0, 0.5), 0 0 20px rgba(0, 255, 0, 0.5), 0 0 30px rgba(0, 0, 255, 0.5);
+  }
+  50% {
+    box-shadow: 0 0 20px rgba(255, 0, 0, 1), 0 0 30px rgba(0, 255, 0, 1), 0 0 40px rgba(0, 0, 255, 1);
+  }
+  100% {
+    box-shadow: 0 0 10px rgba(255, 0, 0, 0.5), 0 0 20px rgba(0, 255, 0, 0.5), 0 0 30px rgba(0, 0, 255, 0.5);
+  }
+}
+
+
 `<link rel="stylesheet" href="style.css">`:
 
 ```css
