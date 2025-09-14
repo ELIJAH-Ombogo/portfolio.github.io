@@ -1,5 +1,66 @@
 WELCOME TO MY PORTFOLIO
 
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Neon Animation</title>
+  <style>
+    body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      background: black;
+      overflow: hidden;
+    }
+
+    .circle {
+      position: relative;
+      width: 120px;
+      height: 120px;
+      border: 3px solid #00f;
+      border-radius: 50%;
+      box-shadow: 0 0 20px #00f, 0 0 40px #00f;
+      animation: rotate 4s linear infinite;
+    }
+
+    .circle::before,
+    .circle::after {
+      content: "";
+      position: absolute;
+      inset: -30px;
+      border: 3px solid #00f;
+      border-radius: 50%;
+      box-shadow: 0 0 20px #00f, 0 0 40px #00f;
+      animation: rotate 4s linear infinite;
+    }
+
+    .circle::before {
+      animation-delay: -1.3s;
+    }
+
+    .circle::after {
+      animation-delay: -2.6s;
+    }
+
+    @keyframes rotate {
+      0% {
+        transform: rotate(0deg) translateX(0);
+      }
+      100% {
+        transform: rotate(360deg) translateX(0);
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="circle"></div>
+</body>
+</html>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
